@@ -1,0 +1,6 @@
+# Generic ones.
+.DS_Store
+
+# Config file.
+config.php
+
