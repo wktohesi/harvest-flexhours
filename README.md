@@ -25,11 +25,11 @@ Just run `./flexhours.php`. This will check the balance using configured / defau
 
 ## Configuration
 Configuration options:
-- $credentials: Harvest credentials. Harvest calls are made using a https protocol so this info travels encrypted. But you should be extra careful in setting your config file access permissions to your eyes only by running `chmod 600 config.php`.
-- $hours_per_day: Hours per day. Defaults to 7.5.
-- $treshold: Treshol in hours. Discard records that are equal or below this. 1-2 mins might be used when adding message records. Defaults to 2mins.
-- $start_string: Default start date string. Can be overriden with -s or --start argument. Defaults to 'first day of January'.
-- $end_string: Default end date string. Can be overriden with -e or --end argument. Defaults to 'today'.
+- `$credentials`: Harvest credentials. Harvest calls are made using a https protocol so this info travels encrypted. But you should be extra careful in setting your config file access permissions to your eyes only by running `chmod 600 config.php`.
+- `$hours_per_day`: Hours per day. Defaults to 7.5.
+- `$treshold`: Treshol in hours. Discard records that are equal or below this. 1-2 mins might be used when adding message records. Defaults to 2mins.
+- `$start_string`: Default start date string. Can be overriden with -s or --start argument. Defaults to 'first day of January'.
+- `$end_string`: Default end date string. Can be overriden with -e or --end argument. Defaults to 'today'.
 
 ### Dates in options and configuration
 You can give dates in any php-supported date and time format: http://php.net/manual/en/datetime.formats.php
