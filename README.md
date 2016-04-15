@@ -34,3 +34,5 @@ Configuration options:
 ### Dates in options and configuration
 You can give dates in any php-supported date and time format: http://php.net/manual/en/datetime.formats.php
 
+## Having doubts?
+You can compare the results by getting a detailed report of your hours in Harvest and comparing them to results from eg. http://www.timeanddate.com/date/workdays.html .
