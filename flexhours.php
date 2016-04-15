@@ -92,6 +92,9 @@ if (!empty($data->user->id)) {
   $flex = $tracked - $calculated;
   echo "Flex hour status: " . convertTime($flex) . PHP_EOL;
 }
+else {
+  echo "Error: " . (!empty($data->message) ? $data->message : 'No idea why..');
+}
 
 /**
  * Helper function for curl calls.
@@ -108,7 +111,7 @@ function doCurl($url) {
   $data = curl_exec($ch);
 
   if (curl_errno($ch)) {
-    print "Error: " . curl_error($ch) . PHP_EOL;
+    echo "Curl error: " . curl_error($ch) . PHP_EOL;
   }
   else if ($data_var = json_decode($data)) {
     return $data_var;
