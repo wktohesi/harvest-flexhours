@@ -128,15 +128,30 @@ function doCurl($url) {
  */
 function convertTime($dec)
 {
+  // Make this a positive number for hour and minute separation.
+  if ($negative = ($dec < 0)) {
+    $dec = -1 * $dec;
+  }
+
   $hour = floor($dec);
   $min = round(60*($dec - $hour));
+
+  // Return negativity.
+  if ($negative) {
+    $hour = -1 * $hour;
+  }
+
+  // Add a '+'-sign if it's a positive.
   if ($hour > 0) {
     $hour = '+' . $hour;
   }
+
+  // Make sure we always have two digits for minutes.
   if ($min < 10) {
     $min = '0' . $min;
   }
 
+  // Spit it out.
   return $hour . ':' . $min;
 }
 
